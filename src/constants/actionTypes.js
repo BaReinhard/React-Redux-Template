@@ -1,0 +1,1 @@
+export default {BASE_ACTION:"Base Action",SECOND_BASE_ACTION:"2nd Base Action"};
