@@ -15,7 +15,9 @@
     "build:html": "babel-node tools/buildHtml.js",
     "prebuild": "npm-run-all clean-dist test build:html",
     "build": "babel-node tools/build.js",
-    "postbuild": "babel-node tools/distServer"
+    "postbuild": "babel-node tools/distServer",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Brett Reinhard",
   "license": "MIT",
@@ -30,7 +32,8 @@
     "react-router-redux": "4.0.4",
     "redux": "3.5.2",
     "redux-thunk": "2.0.1",
-    "toastr": "2.1.2"
+    "toastr": "2.1.2",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "axios": "^0.16.2",
@@ -79,5 +82,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/bareinhard/react-template"
-  }
+  },
+  "snyk": true
 }
